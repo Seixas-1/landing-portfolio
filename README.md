@@ -3,6 +3,8 @@
 Landing page em React + TypeScript + Vite. O formulário de contato salva os leads numa tabela do Supabase.
 Serve como projeto de portfólio (Pacote A do kit de freelancer) e como página de captação.
 
+**Demonstração no ar:** https://landing-portfolio-seixas-1.vercel.app
+
 ## Rodar localmente
 
 ```bash
