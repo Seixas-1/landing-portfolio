@@ -444,7 +444,13 @@ a {
 .projects {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr));
+}
+
+.project .fine {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: -12px 0 24px;
 }
 
 .project {

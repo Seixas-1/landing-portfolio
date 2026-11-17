@@ -1,6 +1,8 @@
 import ContactForm from "./ContactForm";
 
 const REPO = "https://github.com/Seixas-1/landing-portfolio";
+const ASPM_REPO = "https://github.com/Seixas-1/aspm-com-ia";
+const SECURAPY_REPO = "https://github.com/Seixas-1/securapy-platform-coding-security-fiap";
 const YEAR = new Date().getFullYear();
 
 const STACK = ["React", "TypeScript", "Vite", "Node.js", "Supabase", "PostgreSQL", "SQL", "RLS", "REST APIs", "QA", "Git"];
@@ -242,13 +244,59 @@ export default function App() {
                   Ver código <span aria-hidden="true">↗</span>
                 </a>
               </article>
+              <article className="project">
+                <p className="tag">FIAP · Equipe de 5</p>
+                <h3>ASPM com IA</h3>
+                <p>
+                  Plataforma que reúne os alertas de três scanners (Bandit, Trivy e OWASP ZAP),
+                  normaliza tudo e usa 3 agentes de IA para dar nota de risco, explicar a falha e
+                  sugerir a correção. Minha parte: o pipeline em Python, a API em FastAPI, a
+                  interface web, o suporte a modelo local e o guia de instalação.
+                </p>
+                <ul className="chips">
+                  <li>Python</li>
+                  <li>FastAPI</li>
+                  <li>Bandit</li>
+                  <li>Trivy</li>
+                  <li>OWASP ZAP</li>
+                  <li>IA</li>
+                </ul>
+                <p className="fine">
+                  Inclui um app vulnerável de propósito, só para os scanners terem o que achar.
+                </p>
+                <a href={ASPM_REPO} className="btn" target="_blank" rel="noopener noreferrer">
+                  Ver código <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article className="project">
+                <p className="tag">FIAP · Projeto acadêmico</p>
+                <h3>SecuraPy, SIEM em Python</h3>
+                <p>
+                  Recebe logs de autenticação, firewall e web e detecta brute force, port scan e
+                  IPs em lista de bloqueio. API REST em Flask com JWT, MongoDB e MySQL, 155 testes
+                  automatizados e Docker. Minha parte: o núcleo do sistema e a persistência dos
+                  dados.
+                </p>
+                <ul className="chips">
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>JWT</li>
+                  <li>MongoDB</li>
+                  <li>MySQL</li>
+                  <li>pytest</li>
+                  <li>Docker</li>
+                </ul>
+                <a href={SECURAPY_REPO} className="btn" target="_blank" rel="noopener noreferrer">
+                  Ver código <span aria-hidden="true">↗</span>
+                </a>
+              </article>
               <article className="project next">
                 <p className="tag">Próximo</p>
                 <h3>O seu projeto pode ser o próximo</h3>
                 <p>
-                  Os sistemas em que já trabalhei são de clientes e não são públicos. Por isso,
-                  aqui só mostro o que posso mostrar. Conte o que você precisa e eu respondo com
-                  prazo e valor.
+                  Os sistemas de clientes em que já trabalhei não são públicos. Por isso, aqui só
+                  mostro o que posso mostrar. Conte o que você precisa e eu respondo com prazo e
+                  valor.
                 </p>
                 <a href="#contato" className="btn ghost">
                   Pedir orçamento
