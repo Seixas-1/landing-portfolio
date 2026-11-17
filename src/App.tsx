@@ -7,6 +7,14 @@ const YEAR = new Date().getFullYear();
 
 const STACK = ["React", "TypeScript", "Vite", "Node.js", "Supabase", "PostgreSQL", "SQL", "RLS", "REST APIs", "QA", "Git"];
 
+const CHECKLIST = [
+  "RLS: o visitante só envia dados, nunca lê",
+  "Validação no banco, não só na tela",
+  "Cabeçalhos de segurança (CSP)",
+  "Teste com a chave pública antes de entregar",
+  "Relatório do que foi verificado",
+];
+
 const SKILLS = [
   {
     area: "Front-end",
@@ -118,23 +126,34 @@ export default function App() {
 
       <main id="topo">
         <section className="hero">
-          <div className="wrap">
-            <p className="eyebrow">Enzo Seixas · Web, QA e segurança de aplicações</p>
-            <h1>
-              Sites e sistemas web <span className="hl">sob medida</span>, com React e Supabase.
-            </h1>
-            <p className="lead">
-              Landing pages, painéis, backend com login e regras de segurança, testes e revisão de
-              apps. Projetos de escopo fechado, com prazo e valor combinados antes de começar.
-            </p>
-            <div className="cta">
-              <a href="#contato" className="btn">
-                Pedir orçamento
-              </a>
-              <a href={REPO} className="btn ghost" target="_blank" rel="noopener noreferrer">
-                Ver código no GitHub <span aria-hidden="true">↗</span>
-              </a>
+          <div className="wrap hero-grid">
+            <div className="hero-text">
+              <p className="eyebrow">Enzo Seixas · Web, QA e segurança de aplicações</p>
+              <h1>
+                Sites e sistemas web <span className="hl">sob medida</span>, com React e Supabase.
+              </h1>
+              <p className="lead">
+                Landing pages, painéis, backend com login e regras de segurança, testes e revisão
+                de apps. Projetos de escopo fechado, com prazo e valor combinados antes de começar.
+              </p>
+              <div className="cta">
+                <a href="#contato" className="btn">
+                  Pedir orçamento
+                </a>
+                <a href={REPO} className="btn ghost" target="_blank" rel="noopener noreferrer">
+                  Ver código no GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
+            <aside className="panel" aria-label="Checklist padrão de cada entrega">
+              <p className="panel-title">Checklist padrão em cada entrega</p>
+              <ul>
+                {CHECKLIST.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+              <p className="panel-foot">Escopo, prazo e valor combinados antes de começar.</p>
+            </aside>
           </div>
           <div className="marquee" aria-label="Tecnologias que eu uso">
             <ul className="track">
@@ -307,9 +326,14 @@ export default function App() {
         </section>
 
         <section id="faq" className="section light">
-          <div className="wrap narrow">
-            <p className="kicker">Dúvidas</p>
-            <h2>Perguntas frequentes</h2>
+          <div className="wrap split">
+            <div className="head">
+              <p className="kicker">Dúvidas</p>
+              <h2>Perguntas frequentes</h2>
+              <p className="side-note">
+                Não achou a sua dúvida? Pergunte pelo <a href="#contato">formulário de contato</a>.
+              </p>
+            </div>
             <div className="faq">
               {FAQ.map((f) => (
                 <details key={f.q}>
@@ -322,24 +346,34 @@ export default function App() {
         </section>
 
         <section id="contato" className="section">
-          <div className="wrap narrow">
-            <p className="kicker">Contato</p>
-            <h2>Vamos conversar sobre o seu projeto</h2>
-            <p className="lead small">
-              Conte o que você precisa. Respondo com perguntas rápidas e uma estimativa de prazo e
-              valor.
-            </p>
+          <div className="wrap split">
+            <div className="head">
+              <p className="kicker">Contato</p>
+              <h2>Vamos conversar sobre o seu projeto</h2>
+              <p className="lead small">
+                Conte o que você precisa. Respondo com perguntas rápidas e uma estimativa de prazo
+                e valor.
+              </p>
+              <ul className="facts">
+                <li>Escopo, prazo e valor combinados antes de começar</li>
+                <li>Resposta em até 2 dias úteis</li>
+                <li>Seus dados servem só para responder ao contato</li>
+              </ul>
+            </div>
             <ContactForm />
           </div>
         </section>
 
         <section id="privacidade" className="section dim">
-          <div className="wrap narrow privacy">
-            <h2>Política de privacidade</h2>
-            <p>
-              Esta página coleta apenas o que você digita no formulário de contato. Veja como
-              esses dados são tratados, conforme a Lei Geral de Proteção de Dados (LGPD).
-            </p>
+          <div className="wrap split privacy">
+            <div className="head">
+              <h2>Política de privacidade</h2>
+              <p className="side-note">
+                Esta página coleta apenas o que você digita no formulário de contato. Veja como
+                esses dados são tratados, conforme a Lei Geral de Proteção de Dados (LGPD).
+              </p>
+            </div>
+            <div className="body">
             <h3>Quem é o responsável</h3>
             <p>Enzo Seixas, responsável pelo tratamento dos dados enviados nesta página.</p>
             <h3>Quais dados</h3>
@@ -368,6 +402,7 @@ export default function App() {
               Envie o pedido pelo formulário acima, escolhendo "Outro" e escrevendo "Privacidade"
               no começo da mensagem.
             </p>
+            </div>
           </div>
         </section>
       </main>
