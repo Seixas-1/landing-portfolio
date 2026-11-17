@@ -295,7 +295,47 @@ a {
 .grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ---------- Habilidades ---------- */
+.skills {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.skill {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.skill h3 {
+  font-size: 1.25rem;
+  padding-left: 14px;
+  border-left: 4px solid var(--orange);
+}
+
+.skill p {
+  color: var(--muted);
+}
+
+.skill .chips {
+  margin: 0;
+}
+
+.skill.more {
+  border: 2px dashed #555;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill.more .btn {
+  margin-top: auto;
 }
 
 .card {

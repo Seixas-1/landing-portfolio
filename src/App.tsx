@@ -3,7 +3,35 @@ import ContactForm from "./ContactForm";
 const REPO = "https://github.com/Seixas-1/landing-portfolio";
 const YEAR = new Date().getFullYear();
 
-const STACK = ["React", "TypeScript", "Vite", "Node.js", "Supabase", "PostgreSQL", "REST APIs", "Git"];
+const STACK = ["React", "TypeScript", "Vite", "Node.js", "Supabase", "PostgreSQL", "SQL", "RLS", "REST APIs", "QA", "Git"];
+
+const SKILLS = [
+  {
+    area: "Front-end",
+    text: "Interfaces rápidas, responsivas e acessíveis.",
+    chips: ["React", "TypeScript", "Vite", "HTML e CSS", "Formulários e validação"],
+  },
+  {
+    area: "Back-end e dados",
+    text: "Banco, login e APIs que sustentam o seu produto.",
+    chips: ["Node.js", "PostgreSQL e SQL", "Supabase Auth", "Realtime e Storage", "Edge Functions", "APIs REST"],
+  },
+  {
+    area: "QA e testes",
+    text: "Achar o erro antes do seu cliente achar.",
+    chips: ["Testes de sistema", "Validação de qualidade", "Reprodução de bugs", "Teste de fluxos"],
+  },
+  {
+    area: "Segurança de aplicações",
+    text: "Dados protegidos desde o desenho do app.",
+    chips: ["RLS e permissões", "Validação no banco", "CSP e cabeçalhos", "2FA", "Revisão de riscos"],
+  },
+  {
+    area: "IA e chatbots",
+    text: "Protótipos de chat com IA prontos para validar a ideia.",
+    chips: ["Chat com IA", "Painel administrativo", "Interface pública do chat"],
+  },
+];
 
 const SERVICES = [
   {
@@ -23,6 +51,12 @@ const SERVICES = [
     title: "Correção de bugs e novas funcionalidades",
     text: "Seu app em React já existe e travou? Eu leio o código, acho o problema e explico o que foi feito.",
     items: ["Diagnóstico antes do preço", "Correção com teste", "Explicação do que mudou", "Funcionalidades pequenas"],
+  },
+  {
+    n: "04",
+    title: "Revisão de segurança de app Supabase",
+    text: "App feito às pressas ou com ferramentas de IA? Eu reviso permissões e RLS, testo o que um visitante consegue ler ou alterar e entrego um relatório com os riscos por prioridade. Não é um pentest completo.",
+    items: ["Revisão de RLS e permissões", "Teste com a chave pública", "Chaves e variáveis de ambiente", "Relatório priorizado"],
   },
 ];
 
@@ -50,6 +84,10 @@ const FAQ = [
     a: "Sim. Corrijo bugs e crio funcionalidades pequenas em projetos React e Supabase existentes. Primeiro eu leio o código e só depois falo de prazo e valor.",
   },
   {
+    q: "Você faz revisão de segurança?",
+    a: "Faço revisão focada em apps React e Supabase: permissões, RLS, chaves e o que um visitante consegue ler ou alterar. É uma revisão com relatório, não um pentest completo e não substitui uma auditoria especializada.",
+  },
+  {
     q: "O que acontece com os dados que eu enviar no formulário?",
     a: "Eles são usados só para responder ao seu contato. Está tudo explicado na política de privacidade, no fim da página.",
   },
@@ -65,6 +103,7 @@ export default function App() {
           </a>
           <nav aria-label="Principal">
             <a href="#servicos">Serviços</a>
+            <a href="#habilidades">Habilidades</a>
             <a href="#processo">Como trabalho</a>
             <a href="#projetos">Projetos</a>
             <a href="#faq">FAQ</a>
@@ -78,13 +117,13 @@ export default function App() {
       <main id="topo">
         <section className="hero">
           <div className="wrap">
-            <p className="eyebrow">Enzo Seixas · Desenvolvedor web full stack</p>
+            <p className="eyebrow">Enzo Seixas · Web, QA e segurança de aplicações</p>
             <h1>
               Sites e sistemas web <span className="hl">sob medida</span>, com React e Supabase.
             </h1>
             <p className="lead">
-              Landing pages, painéis e backend com login e regras de segurança. Projetos de escopo
-              fechado, com prazo e valor combinados antes de começar.
+              Landing pages, painéis, backend com login e regras de segurança, testes e revisão de
+              apps. Projetos de escopo fechado, com prazo e valor combinados antes de começar.
             </p>
             <div className="cta">
               <a href="#contato" className="btn">
@@ -123,6 +162,36 @@ export default function App() {
                   </ul>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="habilidades" className="section dim">
+          <div className="wrap">
+            <p className="kicker">Habilidades</p>
+            <h2>O que eu domino</h2>
+            <div className="skills">
+              {SKILLS.map((s) => (
+                <article key={s.area} className="skill">
+                  <h3>{s.area}</h3>
+                  <p>{s.text}</p>
+                  <ul className="chips">
+                    {s.chips.map((c) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+              <article className="skill more">
+                <h3>Precisa de outra coisa?</h3>
+                <p>
+                  Me conta o que você precisa. Se não for a minha área, eu digo na hora, em vez de
+                  prometer o que não entrego.
+                </p>
+                <a href="#contato" className="btn ghost small">
+                  Falar comigo
+                </a>
+              </article>
             </div>
           </div>
         </section>
