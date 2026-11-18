@@ -369,38 +369,52 @@ export default function App() {
             <div className="head">
               <h2>Política de privacidade</h2>
               <p className="side-note">
-                Esta página coleta apenas o que você digita no formulário de contato. Veja como
-                esses dados são tratados, conforme a Lei Geral de Proteção de Dados (LGPD).
+                Veja como os dados desta página são tratados, conforme a Lei Geral de Proteção de
+                Dados (LGPD). Atualizada em 18/11/2026.
               </p>
             </div>
             <div className="body">
             <h3>Quem é o responsável</h3>
-            <p>Enzo Seixas, responsável pelo tratamento dos dados enviados nesta página.</p>
+            <p>
+              Enzo Parada Seixas, pessoa física, responsável pelo tratamento dos dados enviados
+              nesta página. Contato: pelo formulário de contato desta página.
+            </p>
             <h3>Quais dados</h3>
-            <p>Nome, e-mail, tipo de serviço escolhido e a mensagem que você escrever.</p>
+            <p>
+              Nome, e-mail, tipo de serviço escolhido e a mensagem que você escrever. Ao abrir a
+              página, o provedor de hospedagem também recebe dados técnicos de conexão, como o
+              endereço IP, necessários para entregar o site.
+            </p>
             <h3>Para quê</h3>
             <p>
               Somente para responder ao seu contato e, se você quiser, combinar um orçamento. Não
               uso seus dados para propaganda e não os vendo.
             </p>
             <h3>Base legal</h3>
-            <p>Seu consentimento, dado ao enviar o formulário.</p>
-            <h3>Onde ficam guardados</h3>
             <p>
-              Em um banco de dados do Supabase, provedor de infraestrutura que armazena os dados
-              em meu nome. Não há outro compartilhamento. Esta página não usa cookies nem
+              Seu consentimento, dado ao enviar o formulário, e os procedimentos preliminares de
+              um possível contrato, quando você pede um orçamento.
+            </p>
+            <h3>Com quem os dados são tratados</h3>
+            <p>
+              Supabase (banco de dados, na região de São Paulo), Resend (envio do aviso por
+              e-mail para mim quando você escreve, e pode processar dados fora do Brasil) e
+              Cloudflare (hospedagem do site). Esses provedores tratam os dados em meu nome. Não
+              vendo seus dados nem os uso para propaganda. Esta página não usa cookies nem
               ferramentas de análise ou rastreamento.
             </p>
             <h3>Por quanto tempo</h3>
             <p>
-              Pelo tempo necessário para responder e negociar o projeto. Depois disso, os dados
-              podem ser apagados.
+              Por até 6 meses após o último contato, ou antes disso, se você pedir a exclusão.
             </p>
             <h3>Seus direitos</h3>
             <p>
-              Você pode pedir acesso, correção ou exclusão dos seus dados a qualquer momento.
-              Envie o pedido pelo formulário acima, escolhendo "Outro" e escrevendo "Privacidade"
-              no começo da mensagem.
+              Você pode pedir confirmação do tratamento, acesso, correção, anonimização, bloqueio
+              ou eliminação, portabilidade, informação sobre com quem os dados são compartilhados
+              e a revogação do consentimento, a qualquer momento. Envie o pedido pelo formulário
+              acima, escolhendo "Outro" e escrevendo "Privacidade" no começo da mensagem.
+              Respondo em até 15 dias. Se achar que seus dados foram mal tratados, você também
+              pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).
             </p>
             </div>
           </div>
