@@ -26,6 +26,8 @@ mas não envia nada.
 5. (Opcional) Para receber um e-mail a cada contato novo, crie os segredos `resend_api_key` e
    `notify_email` no Vault (comandos no topo do arquivo) e rode
    [supabase/migrations/002_notify_new_contact.sql](supabase/migrations/002_notify_new_contact.sql).
+6. (Opcional) Para apagar contatos 6 meses após o último contato, como diz a política de
+   privacidade, rode [supabase/migrations/003_purge_old_contacts.sql](supabase/migrations/003_purge_old_contacts.sql).
 
 ## Publicar
 
