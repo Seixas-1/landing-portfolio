@@ -257,7 +257,7 @@ export default function App() {
                   <li>TypeScript</li>
                   <li>Supabase</li>
                   <li>RLS</li>
-                  <li>Vercel</li>
+                  <li>Cloudflare Pages</li>
                 </ul>
                 <a href={REPO} className="btn" target="_blank" rel="noopener noreferrer">
                   Ver código <span aria-hidden="true">↗</span>
