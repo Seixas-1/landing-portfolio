@@ -108,8 +108,8 @@ export default function App() {
     <>
       <header className="nav">
         <div className="wrap nav-in">
-          <a href="#topo" className="brand" aria-label="Seixas.dev, voltar ao topo">
-            Seixas<span>.dev</span>
+          <a href="#topo" className="brand" aria-label="Enzo Seixas, voltar ao topo">
+            Enzo <span>Seixas</span>
           </a>
           <nav aria-label="Principal">
             <a href="#servicos">Serviços</a>
