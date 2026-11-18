@@ -23,6 +23,9 @@ mas não envia nada.
 3. Copie `.env.example` para `.env` e preencha a URL e a chave **anon** (Project Settings > API).
    Nunca use a chave `service_role` no front-end.
 4. Rode `npm run dev`, envie um contato e confira em Table Editor > `contacts`.
+5. (Opcional) Para receber um e-mail a cada contato novo, crie os segredos `resend_api_key` e
+   `notify_email` no Vault (comandos no topo do arquivo) e rode
+   [supabase/migrations/002_notify_new_contact.sql](supabase/migrations/002_notify_new_contact.sql).
 
 ## Publicar
 
